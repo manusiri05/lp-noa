@@ -51,10 +51,16 @@
     #hd{position:fixed;top:0;left:0;right:0;z-index:1000;height:var(--hh);display:flex;align-items:center;padding:0 32px;transition:background .3s,box-shadow .3s;}
     #hd.sc{background:rgba(26,14,9,.97);box-shadow:0 2px 24px rgba(0,0,0,.25);}
     .hi{width:100%;display:flex;align-items:center;justify-content:space-between;}
-    .hl img{height:36px;width:auto;filter:brightness(0) invert(1);}
+    .hl img{height:54px;width:auto;filter:invert(1);mix-blend-mode:screen;}
     .hn{display:flex;align-items:center;gap:32px;}
     .hn a{font-size:11px;font-weight:600;color:rgba(255,255,255,.75);letter-spacing:.1em;text-transform:uppercase;transition:color .2s;}
     .hn a:hover{color:var(--gold);}
+    /* MADE TO headline system */
+    .mto{display:flex;align-items:center;gap:1.5rem;font-size:clamp(1.5rem,3.5vw,2.6rem);font-weight:700;letter-spacing:.18em;text-transform:uppercase;line-height:1;color:var(--dark);margin-bottom:.5rem;}
+    .mto-line{flex:1;height:2px;background:currentColor;display:block;opacity:.18;}
+    .mto em{font-style:normal;color:var(--gold);}
+    @media(max-width:480px){.mto{font-size:clamp(1rem,7vw,1.5rem);gap:.75rem;letter-spacing:.12em;}}
+
     .bp{display:inline-flex;align-items:center;gap:8px;background:var(--gold);color:var(--dark);font-family:var(--font);font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;padding:13px 28px;border:none;cursor:pointer;transition:background .2s,transform .15s;}
     .bp:hover{background:var(--gold-dark);transform:translateY(-1px);}
     .bo{display:inline-flex;align-items:center;gap:8px;background:transparent;color:var(--white);font-family:var(--font);font-size:11px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;padding:13px 28px;border:1px solid rgba(255,255,255,.3);cursor:pointer;transition:border-color .2s,background .2s;}
@@ -62,7 +68,7 @@
 
     /* HERO */
     #hero{position:relative;height:100vh;min-height:620px;overflow:hidden;display:flex;align-items:flex-end;}
-    .hbg{position:absolute;inset:0;background-image:url('https://raw.githubusercontent.com/manusiri05/lp-noa/main/images/noa-schladming-dachterrasse-rooftop-pool-18-750x600-c-center.jpg');background-size:cover;background-position:center;transform:scale(1.05);transition:transform 9s ease;}
+    .hbg{position:absolute;inset:0;background-image:url('https://raw.githubusercontent.com/manusiri05/lp-noa/main/images/noa-schladming-dachterrasse-rooftop-pool-18-900x900-c-center.webp');background-size:cover;background-position:center;transform:scale(1.05);transition:transform 9s ease;}
     #hero.ld .hbg{transform:scale(1);}
     .hov{position:absolute;inset:0;background:linear-gradient(to top,rgba(26,14,9,.9) 0%,rgba(26,14,9,.35) 50%,rgba(26,14,9,.1) 100%);}
     .hco{position:relative;z-index:2;padding:0 24px 88px;max-width:var(--mw);margin:0 auto;width:100%;}
@@ -125,7 +131,7 @@
 
     /* PHILOSOPHY */
     #phil{position:relative;min-height:560px;display:flex;align-items:center;overflow:hidden;}
-    .pbg{position:absolute;inset:0;background-image:url('https://raw.githubusercontent.com/manusiri05/lp-noa/main/images/noa-schladming-dachterrasse-rooftop-pool-18-750x600-c-center.jpg');background-size:cover;background-position:center;filter:brightness(.28);}
+    .pbg{position:absolute;inset:0;background-image:url('https://raw.githubusercontent.com/manusiri05/lp-noa/main/images/noa-schladming-dachterrasse-rooftop-pool-18-900x900-c-center.webp');background-size:cover;background-position:center;filter:brightness(.28);}
     .pc{position:relative;z-index:2;text-align:center;color:var(--white);max-width:820px;margin:0 auto;}
     .pq{font-family:var(--hand);font-size:clamp(32px,5vw,58px);font-weight:normal;line-height:1.35;margin-bottom:36px;}
     .pq em{color:var(--gold);font-style:normal;}
@@ -282,7 +288,7 @@
     /* FOOTER */
     #ft{background:var(--dark);color:rgba(255,255,255,.45);padding:60px 0 32px;}
     .ftp{display:grid;grid-template-columns:2fr 1fr 1fr;gap:64px;margin-bottom:48px;padding-bottom:48px;border-bottom:1px solid rgba(255,255,255,.06);}
-    .ftb img{height:30px;width:auto;filter:brightness(0) invert(1);margin-bottom:20px;}
+    .ftb img{height:44px;width:auto;filter:invert(1);mix-blend-mode:screen;margin-bottom:20px;}
     .ftb p{font-size:14px;font-weight:300;line-height:1.75;max-width:280px;}
     .ftct{font-size:11px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--white);margin-bottom:20px;}
     .ftc ul{list-style:none;display:flex;flex-direction:column;gap:10px;}
@@ -407,7 +413,7 @@
   <div class="container">
     <div class="uh fu">
       <span class="lbl">Warum noa</span>
-      <h2 class="ttl">Fuenf Sterne leuchten <em>still.</em></h2>
+      <div class="mto">Made to <span class="mto-line"></span> <em>Feel</em></div>
     </div>
     <div class="ug">
       <div class="uc fu">
@@ -436,10 +442,10 @@
 
 <!-- FEATURES -->
 <section id="features" class="sp">
-  <div class="container"><div class="fh fu"><span class="lbl">Das noa Erlebnis</span><h2 class="ttl">Drei Welten. <em>Ein</em> Haus.</h2></div></div>
+  <div class="container"><div class="fh fu"><span class="lbl">Das noa Erlebnis</span><div class="mto">Made to <span class="mto-line"></span> <em>Explore</em></div></div></div>
   <div class="ft">
     <div class="ftile fu">
-      <img src="https://raw.githubusercontent.com/manusiri05/lp-noa/main/images/zimmer_allgemein.webp" alt="Luxussuiten noa Schladming 5 Sterne" loading="lazy" />
+      <img src="https://raw.githubusercontent.com/manusiri05/lp-noa/main/images/goldenskysuite.png" alt="Luxussuiten noa Schladming 5 Sterne" loading="lazy" />
       <div class="fo"></div>
       <div class="fc">
         <div class="fn">01</div><h3 class="ftt">Luxussuiten</h3>
@@ -485,7 +491,7 @@
     <div class="zh">
       <div>
         <span class="lbl">26 Exklusive Suiten</span>
-        <h2 class="ttl">Finden Sie <em>Ihre</em> Suite.</h2>
+        <div class="mto">Made to <span class="mto-line"></span> <em>Stay</em></div>
       </div>
       <div class="zr">
         <button class="znb" id="zPrev" aria-label="Vorherige Suite"><svg viewBox="0 0 24 24"><path d="M15 18l-6-6 6-6"/></svg></button>
@@ -500,7 +506,7 @@
         <!-- 1: Starlight Suite -->
         <div class="zsl">
           <div class="zim">
-            <img src="https://raw.githubusercontent.com/manusiri05/lp-noa/main/images/starlight.webp" alt="Starlight Suite noa Schladming" loading="lazy" />
+            <img src="https://raw.githubusercontent.com/manusiri05/lp-noa/main/images/IMG_0264-1-scaled-e1768667119479-750x600-c-center.jpg" alt="Starlight Suite noa Schladming" loading="lazy" />
             <span class="zcat">Signature</span>
           </div>
           <div class="zbody">
@@ -706,7 +712,7 @@
 <!-- EXPERIENCES -->
 <section id="erl" class="sp">
   <div class="container">
-    <div class="eh fu"><span class="lbl">Aktivitaeten &amp; Erlebnisse</span><h2 class="ttl">Der Berg wartet. <em>Wir auch.</em></h2></div>
+    <div class="eh fu"><span class="lbl">Aktivitaeten &amp; Erlebnisse</span><div class="mto">Made to <span class="mto-line"></span> <em>Discover</em></div></div>
     <div class="eg">
       <div class="ec fu">
         <div class="eci"><img src="https://noa-schladming.com/wp-content/uploads/2026/01/Skifahren-Reiteralm-217-C-Mirja-Geh-12-2023-scaled-750x600-c-center.jpg" alt="Skifahren Schladming Planai Luxushotel" loading="lazy" /></div>
@@ -714,7 +720,7 @@
         <p class="ecx">Vom Zimmer auf die Piste. Schladming-Dachstein: 4 Bergregionen, ueber 120 km Abfahrt.</p>
       </div>
       <div class="ec fu" style="transition-delay:.1s;">
-        <div class="eci"><img src="https://raw.githubusercontent.com/manusiri05/lp-noa/main/images/noa-schladming-dachterrasse-rooftop-pool-18-750x600-c-center.jpg" alt="Rooftop Sky-Pool Luxushotel Schladming noa" loading="lazy" /></div>
+        <div class="eci"><img src="https://raw.githubusercontent.com/manusiri05/lp-noa/main/images/noa-schladming-dachterrasse-rooftop-pool-18-900x900-c-center.webp" alt="Rooftop Sky-Pool Luxushotel Schladming noa" loading="lazy" /></div>
         <p class="ecl">Wellness</p><h3 class="ect">Rooftop Sky-Pool</h3>
         <p class="ecx">Schwimmen mit Alpenpanorama. Das Herzstuck des noa Spa &amp; Wellnessbereichs.</p>
       </div>
@@ -758,9 +764,9 @@
 
 <!-- GALLERY -->
 <section id="gal" class="sp">
-  <div class="container"><div class="gh fu"><span class="lbl">Impressionen</span><h2 class="ttl">Das noa in <em>Bildern.</em></h2></div></div>
+  <div class="container"><div class="gh fu"><span class="lbl">Impressionen</span><div class="mto">Made to <span class="mto-line"></span> <em>See</em></div></div></div>
   <div class="gg" style="max-width:1440px;margin:0 auto;padding:0 4px;">
-    <div class="gi"><img src="https://raw.githubusercontent.com/manusiri05/lp-noa/main/images/noa-schladming-dachterrasse-rooftop-pool-18-750x600-c-center.jpg" alt="Rooftop Pool noa Schladming Luxury Hotel" loading="lazy" /></div>
+    <div class="gi"><img src="https://raw.githubusercontent.com/manusiri05/lp-noa/main/images/noa-schladming-dachterrasse-rooftop-pool-18-900x900-c-center.webp" alt="Rooftop Pool noa Schladming Luxury Hotel" loading="lazy" /></div>
     <div class="gi"><img src="https://noa-schladming.com/wp-content/uploads/2026/03/frau-mit-weinglaeser-1300x1080-c-center.jpg" alt="noa Bar Schladming" loading="lazy" /></div>
     <div class="gi"><img src="https://noa-schladming.com/wp-content/uploads/2026/01/noa-schladming-golden-details-scaled-1300x1080-c-center.jpg" alt="Golden Details noa Suite" loading="lazy" /></div>
     <div class="gi"><img src="https://raw.githubusercontent.com/manusiri05/lp-noa/main/images/restaurant-noa-schladming-2-scaled-1920x600-c-center.webp" alt="Restaurant noa Schladming Fine Dining" loading="lazy" /></div>
