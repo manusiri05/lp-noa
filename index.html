@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>noa Schladming – 5-Sterne Luxushotel | Ski-in/Ski-out Planai</title>
-  <meta name="description" content="noa Schladming: Das erste 5-Sterne Hotel Schladmings. 26 exklusive Suiten, Rooftop Sky-Pool, Ski-in/Ski-out Planai und das weltweit erste Schaumdampfbad. Jetzt anfragen." />
+  <title>noa Schladming – 5-Sterne Komfort | Ski-in/Ski-out Planai</title>
+  <meta name="description" content="noa Schladming: 5-Sterne Feeling in Schladming. 26 exklusive Suiten, Rooftop Sky-Pool, Ski-in/Ski-out Planai und das weltweit erste Schaumdampfbad. Jetzt anfragen." />
   <meta name="robots" content="noindex, nofollow" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -30,41 +30,48 @@
       --white:     #ffffff;
       --font:      'Inter', sans-serif;
       --hand:      'Sandwich Market', cursive;
-      --hh:        72px;
+      --hh:        96px;
       --pad:       90px;
       --mw:        1180px;
     }
     *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
     html{scroll-behavior:smooth;}
-    body{font-family:var(--font);color:var(--dark);background:var(--white);line-height:1.6;-webkit-font-smoothing:antialiased;}
+    body{font-family:var(--font);font-size:17px;color:var(--dark);background:var(--white);line-height:1.65;-webkit-font-smoothing:antialiased;}
     img{max-width:100%;height:auto;display:block;}
     a{color:inherit;text-decoration:none;}
     .container{max-width:var(--mw);margin:0 auto;padding:0 24px;}
     .sp{padding:var(--pad) 0;}
     .lbl{font-size:11px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);margin-bottom:16px;display:block;}
     .ttl{font-size:clamp(28px,4vw,44px);font-weight:300;line-height:1.12;letter-spacing:-.025em;}
-    .ttl em{font-style:italic;color:var(--gold);}
+    .ttl em{font-style:normal;color:inherit;}
     .fu{opacity:0;transform:translateY(28px);transition:opacity .7s ease,transform .7s ease;}
     .fu.vis{opacity:1;transform:translateY(0);}
 
     /* HEADER */
-    #hd{position:fixed;top:0;left:0;right:0;z-index:1000;height:var(--hh);display:flex;align-items:center;padding:0 32px;transition:background .3s,box-shadow .3s;}
-    #hd.sc{background:rgba(26,14,9,.97);box-shadow:0 2px 24px rgba(0,0,0,.25);}
+    #hd{position:fixed;top:0;left:0;right:0;z-index:1000;height:var(--hh);display:flex;align-items:center;padding:0 40px;background:transparent;transition:background .45s ease,box-shadow .45s ease,height .45s ease;}
+    #hd.sc{background:rgba(255,255,255,.98);box-shadow:0 1px 0 rgba(0,0,0,.07);height:80px;}
     .hi{width:100%;display:flex;align-items:center;justify-content:space-between;}
-    .hl img{height:54px;width:auto;filter:invert(1);mix-blend-mode:screen;}
+    .hn-l{display:flex;align-items:center;gap:32px;flex:1;}
+    .hn-r{display:flex;align-items:center;gap:32px;flex:1;justify-content:flex-end;}
+    .hn-l a,.hn-r a{font-size:11px;font-weight:600;color:rgba(255,255,255,.85);letter-spacing:.12em;text-transform:uppercase;transition:color .2s;}
+    #hd.sc .hn-l a,#hd.sc .hn-r a{color:var(--dark);}
+    .hn-l a:hover,.hn-r a:hover,.hn-l a:hover,.hn-r a:hover{color:var(--gold);}
+    .hl{display:flex;align-items:center;justify-content:center;}
+    .hl img{height:80px;width:auto;filter:none;mix-blend-mode:normal;transition:height .45s ease;}
+    #hd.sc .hl img{height:58px;}
+    /* keep for compat */
     .hn{display:flex;align-items:center;gap:32px;}
     .hn a{font-size:11px;font-weight:600;color:rgba(255,255,255,.75);letter-spacing:.1em;text-transform:uppercase;transition:color .2s;}
-    .hn a:hover{color:var(--gold);}
     /* MADE TO headline system */
     .mto{display:flex;align-items:center;gap:1.5rem;font-size:clamp(1.5rem,3.5vw,2.6rem);font-weight:700;letter-spacing:.18em;text-transform:uppercase;line-height:1;color:var(--dark);margin-bottom:.5rem;}
-    .mto-line{flex:1;height:2px;background:currentColor;display:block;opacity:.18;}
-    .mto em{font-style:normal;color:var(--gold);}
+    .mto-line{flex:1;height:2px;background:currentColor;display:block;opacity:.2;}
+    .mto em{font-style:normal;color:inherit;}
     @media(max-width:480px){.mto{font-size:clamp(1rem,7vw,1.5rem);gap:.75rem;letter-spacing:.12em;}}
 
-    .bp{display:inline-flex;align-items:center;gap:8px;background:var(--gold);color:var(--dark);font-family:var(--font);font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;padding:13px 28px;border:none;cursor:pointer;transition:background .2s,transform .15s;}
-    .bp:hover{background:var(--gold-dark);transform:translateY(-1px);}
-    .bo{display:inline-flex;align-items:center;gap:8px;background:transparent;color:var(--white);font-family:var(--font);font-size:11px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;padding:13px 28px;border:1px solid rgba(255,255,255,.3);cursor:pointer;transition:border-color .2s,background .2s;}
-    .bo:hover{border-color:rgba(255,255,255,.7);background:rgba(255,255,255,.06);}
+    .bp{display:inline-flex;align-items:center;gap:8px;background:var(--dark);color:var(--white);font-family:var(--font);font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;padding:13px 32px;border:none;cursor:pointer;border-radius:50px;transition:background .2s,transform .15s;}
+    .bp:hover{background:#2e1f18;transform:translateY(-1px);}
+    .bo{display:inline-flex;align-items:center;gap:8px;background:var(--dark);color:var(--white);font-family:var(--font);font-size:11px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;padding:13px 32px;border:none;cursor:pointer;border-radius:50px;transition:background .2s,transform .15s;}
+    .bo:hover{background:#2e1f18;transform:translateY(-1px);}
 
     /* HERO */
     #hero{position:relative;height:100vh;min-height:620px;overflow:hidden;display:flex;align-items:flex-end;}
@@ -76,7 +83,7 @@
     .ht{font-size:clamp(44px,7vw,80px);font-weight:300;color:var(--white);line-height:1.04;letter-spacing:-.035em;margin-bottom:28px;max-width:680px;}
     .ht .ind{display:inline-block;padding-left:1.2em;}
     .ht em{font-style:italic;color:var(--gold);}
-    .hs{font-size:15px;font-weight:300;color:rgba(255,255,255,.7);margin-bottom:44px;max-width:460px;line-height:1.75;}
+    .hs{font-size:17px;font-weight:300;color:rgba(255,255,255,.7);margin-bottom:44px;max-width:460px;line-height:1.75;}
     .hct{display:flex;gap:16px;flex-wrap:wrap;}
     .hsc{position:absolute;bottom:32px;right:32px;display:flex;flex-direction:column;align-items:center;gap:8px;color:rgba(255,255,255,.35);font-size:9px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;}
     .hsl{width:1px;height:48px;background:rgba(255,255,255,.15);position:relative;overflow:hidden;}
@@ -86,9 +93,9 @@
     /* INTRO */
     #intro{background:var(--white);}
     .ig{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center;}
-    .ib{font-size:15px;font-weight:300;color:var(--gray);line-height:1.85;margin-bottom:18px;}
+    .ib{font-size:17px;font-weight:300;color:var(--gray);line-height:1.85;margin-bottom:18px;}
     .ib.ind{text-indent:2em;}
-    .ica{margin-top:36px;display:inline-flex;align-items:center;gap:10px;background:var(--dark);color:var(--white);font-family:var(--font);font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;padding:14px 28px;transition:background .2s;}
+    .ica{margin-top:36px;display:inline-flex;align-items:center;gap:10px;background:var(--dark);color:var(--white);font-family:var(--font);font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;padding:14px 32px;border-radius:50px;transition:background .2s;}
     .ica:hover{background:var(--dark-mid);}
     .ist{display:flex;gap:40px;margin-top:44px;padding-top:40px;border-top:1px solid var(--light-d);}
     .isn{font-size:40px;font-weight:300;color:var(--dark);letter-spacing:-.04em;line-height:1;}
@@ -101,19 +108,19 @@
     .ibg .l{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.12em;color:rgba(255,255,255,.45);margin-top:5px;}
 
     /* USPs */
-    #usps{background:var(--dark);color:var(--white);}
+    #usps{background:var(--white);color:var(--dark);}
     .uh{text-align:center;margin-bottom:64px;}
-    .uh .ttl{color:var(--white);}
-    .ug{display:grid;grid-template-columns:repeat(4,1fr);gap:2px;background:rgba(255,255,255,.04);}
-    .uc{background:var(--dark);padding:48px 32px;transition:background .3s;}
-    .uc:hover{background:var(--dark-mid);}
-    .ui{width:44px;height:44px;margin-bottom:24px;color:var(--gold);}
+    .uh .ttl{color:var(--dark);}
+    .ug{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--light-d);}
+    .uc{background:var(--white);padding:48px 32px;transition:background .3s;}
+    .uc:hover{background:var(--light);}
+    .ui{width:44px;height:44px;margin-bottom:24px;color:var(--dark);}
     .ui svg{width:100%;height:100%;fill:none;stroke:currentColor;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round;}
-    .ut{font-size:16px;font-weight:500;color:var(--white);margin-bottom:12px;}
-    .ux{font-size:14px;font-weight:300;color:rgba(255,255,255,.48);line-height:1.75;}
+    .ut{font-size:17px;font-weight:600;color:var(--dark);margin-bottom:12px;}
+    .ux{font-size:15px;font-weight:300;color:var(--gray);line-height:1.75;}
 
     /* FEATURES */
-    #features{background:var(--light);}
+    #features{background:var(--white);}
     .fh{margin-bottom:56px;}
     .ft{display:grid;grid-template-columns:repeat(3,1fr);gap:3px;}
     .ftile{position:relative;overflow:hidden;cursor:pointer;height:500px;}
@@ -140,14 +147,14 @@
     /* ============================
        ZIMMER SLIDER – NEW DESIGN
     ============================ */
-    #zimmer{background:var(--dark);overflow:hidden;}
+    #zimmer{background:var(--white);overflow:hidden;}
     .zh{display:flex;align-items:flex-end;justify-content:space-between;margin-bottom:48px;gap:24px;}
-    .zh .ttl{color:var(--white);}
+    .zh .ttl{color:var(--dark);}
     .zr{display:flex;align-items:center;gap:12px;flex-shrink:0;}
-    .znb{width:48px;height:48px;border:1px solid rgba(255,255,255,.18);background:transparent;color:var(--white);cursor:pointer;display:flex;align-items:center;justify-content:center;transition:border-color .2s,background .2s;flex-shrink:0;}
-    .znb:hover{border-color:var(--gold);background:rgba(198,164,108,.1);}
+    .znb{width:48px;height:48px;border:1px solid var(--light-d);background:transparent;color:var(--dark);cursor:pointer;display:flex;align-items:center;justify-content:center;transition:border-color .2s,background .2s;flex-shrink:0;}
+    .znb:hover{border-color:var(--dark);background:var(--light);}
     .znb svg{width:20px;height:20px;stroke:currentColor;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;}
-    .zct{font-size:13px;color:rgba(255,255,255,.3);min-width:48px;text-align:center;}
+    .zct{font-size:13px;color:var(--gray);min-width:48px;text-align:center;}
 
     .ztw{overflow:hidden;}
     .ztr{display:flex;transition:transform .6s cubic-bezier(.16,1,.3,1);}
@@ -179,10 +186,10 @@
 
     .zbody{padding:20px 0 0;flex:1;display:flex;flex-direction:column;}
     .zmeta{display:flex;align-items:center;justify-content:space-between;margin-bottom:8px;}
-    .zsize{font-size:12px;color:rgba(255,255,255,.3);}
-    .zpers{font-size:12px;color:rgba(255,255,255,.3);}
-    .zname{font-size:20px;font-weight:400;color:var(--white);letter-spacing:-.01em;margin-bottom:10px;}
-    .zdesc{font-size:13px;font-weight:300;color:rgba(255,255,255,.45);line-height:1.65;flex:1;}
+    .zsize{font-size:12px;color:var(--gray);}
+    .zpers{font-size:12px;color:var(--gray);}
+    .zname{font-size:21px;font-weight:500;color:var(--dark);letter-spacing:-.01em;margin-bottom:10px;}
+    .zdesc{font-size:14px;font-weight:300;color:var(--gray);line-height:1.65;flex:1;}
 
     /* CTA per slide */
     .zcta{
@@ -202,11 +209,11 @@
     .zcta svg{width:14px;height:14px;stroke:currentColor;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;}
 
     .zdo{display:flex;gap:8px;margin-top:40px;}
-    .zd{width:24px;height:2px;background:rgba(255,255,255,.15);cursor:pointer;transition:background .3s,width .3s;}
-    .zd.act{background:var(--gold);width:48px;}
+    .zd{width:24px;height:2px;background:var(--light-d);cursor:pointer;transition:background .3s,width .3s;}
+    .zd.act{background:var(--dark);width:48px;}
 
     /* EXPERIENCES */
-    #erl{background:var(--light);}
+    #erl{background:var(--white);}
     .eh{margin-bottom:56px;}
     .eg{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;}
     .ec{cursor:pointer;}
@@ -214,8 +221,8 @@
     .eci img{width:100%;height:100%;object-fit:cover;transition:transform .5s ease;}
     .ec:hover .eci img{transform:scale(1.06);}
     .ecl{font-size:10px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);margin-bottom:8px;}
-    .ect{font-size:17px;font-weight:500;color:var(--dark);letter-spacing:-.01em;margin-bottom:8px;}
-    .ecx{font-size:14px;font-weight:300;color:var(--gray);line-height:1.65;}
+    .ect{font-size:19px;font-weight:500;color:var(--dark);letter-spacing:-.01em;margin-bottom:8px;}
+    .ecx{font-size:16px;font-weight:300;color:var(--gray);line-height:1.65;}
 
     /* REVIEWS */
     #rev{background:var(--white);}
@@ -223,14 +230,14 @@
     .rg{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;}
     .rc{background:var(--light);padding:40px 32px;position:relative;}
     .rq{font-size:80px;line-height:1;color:var(--gold);opacity:.22;font-family:Georgia,serif;position:absolute;top:14px;left:26px;}
-    .rt{font-size:15px;font-weight:300;color:var(--dark);line-height:1.8;margin-bottom:28px;position:relative;z-index:1;font-style:italic;}
+    .rt{font-size:16px;font-weight:300;color:var(--dark);line-height:1.8;margin-bottom:28px;position:relative;z-index:1;}
     .ra{display:flex;align-items:center;gap:12px;}
     .rav{width:40px;height:40px;border-radius:50%;background:var(--gold);display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:700;color:var(--white);flex-shrink:0;}
     .ran{font-size:14px;font-weight:600;color:var(--dark);}
     .ram{font-size:12px;color:var(--gray);}
 
     /* GALLERY */
-    #gal{background:var(--light);padding-bottom:0;}
+    #gal{background:var(--white);padding-bottom:0;}
     .gh{margin-bottom:48px;}
     .gg{display:grid;grid-template-columns:repeat(4,1fr);gap:4px;}
     .gi{overflow:hidden;}
@@ -253,7 +260,7 @@
     .ccv a:hover{color:var(--gold);}
     .fms{padding:64px 0;}
     .fmh{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:start;margin-bottom:52px;}
-    .fmt{font-size:15px;font-weight:300;color:var(--gray);line-height:1.78;}
+    .fmt{font-size:17px;font-weight:300;color:var(--gray);line-height:1.78;}
     #bf{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
     .fg{display:flex;flex-direction:column;gap:6px;}
     .fg.full{grid-column:span 2;}
@@ -286,21 +293,21 @@
     #kag.vis{display:grid;grid-template-columns:repeat(auto-fill,minmax(140px,1fr));gap:16px;}
 
     /* FOOTER */
-    #ft{background:var(--dark);color:rgba(255,255,255,.45);padding:60px 0 32px;}
-    .ftp{display:grid;grid-template-columns:2fr 1fr 1fr;gap:64px;margin-bottom:48px;padding-bottom:48px;border-bottom:1px solid rgba(255,255,255,.06);}
-    .ftb img{height:44px;width:auto;filter:invert(1);mix-blend-mode:screen;margin-bottom:20px;}
-    .ftb p{font-size:14px;font-weight:300;line-height:1.75;max-width:280px;}
-    .ftct{font-size:11px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--white);margin-bottom:20px;}
+    #ft{background:var(--white);color:var(--gray);padding:80px 0 40px;border-top:1px solid var(--light-d);}
+    .ftp{display:grid;grid-template-columns:2fr 1fr 1fr;gap:64px;margin-bottom:48px;padding-bottom:48px;border-bottom:1px solid var(--light-d);}
+    .ftb img{height:64px;width:auto;filter:none;margin-bottom:24px;}
+    .ftb p{font-size:15px;font-weight:300;color:var(--gray);line-height:1.75;max-width:280px;}
+    .ftct{font-size:11px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--dark);margin-bottom:20px;}
     .ftc ul{list-style:none;display:flex;flex-direction:column;gap:10px;}
-    .ftc ul li a{font-size:14px;font-weight:300;color:rgba(255,255,255,.38);transition:color .2s;}
-    .ftc ul li a:hover{color:var(--gold);}
+    .ftc ul li a{font-size:15px;font-weight:300;color:var(--gray);transition:color .2s;}
+    .ftc ul li a:hover{color:var(--dark);}
     .ftbo{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px;}
-    .ftl{font-size:12px;color:rgba(255,255,255,.22);}
-    .ftl a{color:rgba(255,255,255,.32);transition:color .2s;}
-    .ftl a:hover{color:var(--gold);}
+    .ftl{font-size:12px;color:rgba(0,0,0,.3);}
+    .ftl a{color:var(--gray);transition:color .2s;}
+    .ftl a:hover{color:var(--dark);}
     .fts{display:flex;gap:12px;}
-    .fts a{width:36px;height:36px;border:1px solid rgba(255,255,255,.1);display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,.38);transition:border-color .2s,color .2s;}
-    .fts a:hover{border-color:var(--gold);color:var(--gold);}
+    .fts a{width:36px;height:36px;border:1px solid var(--light-d);display:flex;align-items:center;justify-content:center;color:var(--gray);transition:border-color .2s,color .2s;}
+    .fts a:hover{border-color:var(--dark);color:var(--dark);}
     .fts svg{width:15px;height:15px;fill:currentColor;}
 
     /* ===== RESPONSIVE ===== */
@@ -317,7 +324,7 @@
     }
     @media(max-width:768px){
       :root{--pad:48px;}
-      .hn{display:none;}
+      .hn-l{display:none;} .hn-r{display:none;}
       .ig{grid-template-columns:1fr;gap:48px;}
       .ibg{left:16px;bottom:16px;}
       .rg{grid-template-columns:1fr;}
@@ -352,14 +359,22 @@
 <!-- HEADER -->
 <header id="hd">
   <div class="hi">
-    <a class="hl" href="#hero"><img src="https://raw.githubusercontent.com/manusiri05/lp-noa/main/images/noa_logo.jpg" alt="noa Schladming" /></a>
-    <nav class="hn">
+    <nav class="hn-l">
       <a href="#intro">Hotel</a>
-      <a href="#zimmer">Suiten</a>
-      <a href="#erl">Erlebnisse</a>
-      <a href="#anf">Anfrage</a>
+      <a href="#zimmer">Zimmer</a>
+      <a href="#erl">Schladming</a>
+      <a href="#anf">SPA</a>
     </nav>
-    <a class="bp" href="#anf">Jetzt anfragen</a>
+    <a class="hl" href="#hero">
+      <img id="hdlogo"
+           src="https://raw.githubusercontent.com/manusiri05/lp-noa/main/images/noa-logo-white-rgb-2200px-w-72ppi.png"
+           data-src-default="https://raw.githubusercontent.com/manusiri05/lp-noa/main/images/noa-logo-white-rgb-2200px-w-72ppi.png"
+           data-src-scroll="https://raw.githubusercontent.com/manusiri05/lp-noa/main/images/noa-logotype-full-color-rgb-2200px-w-72ppi.png"
+           alt="noa Schladming" />
+    </a>
+    <div class="hn-r">
+      <a href="#anf">Anfragen</a>
+    </div>
   </div>
 </header>
 
@@ -369,13 +384,7 @@
   <div class="hov"></div>
   <div class="container">
     <div class="hco">
-      <p class="hey">5-Sterne Luxushotel &middot; Schladming, Steiermark</p>
-      <h1 class="ht">Made to<br /><span class="ind"><em>stay.</em></span></h1>
-      <p class="hs">Das erste 5-Sterne Hotel Schladmings. Direkt an der Planai. 26 Suiten. Ein Ort, an dem Ankommen etwas bedeutet.</p>
-      <div class="hct">
-        <a class="bp" href="#anf">Jetzt unverbindlich anfragen</a>
-        <a class="bo" href="#zimmer">Suiten entdecken</a>
-      </div>
+      <h1 class="ht" style="font-size:clamp(52px,8vw,96px);font-weight:700;letter-spacing:.06em;text-transform:uppercase;display:flex;align-items:center;gap:1.5rem;max-width:100%;"><span>Made to</span><span style="flex:1;height:3px;background:rgba(255,255,255,.25);display:block;"></span><span>Stay</span></h1>
     </div>
   </div>
   <div class="hsc"><span>Scroll</span><div class="hsl"></div></div>
@@ -388,7 +397,7 @@
       <div class="fu">
         <span class="lbl">Ein Ort entsteht</span>
         <h2 class="ttl">Aus der Tischlerei<br />wird etwas <em>Bleibendes.</em></h2>
-        <p class="ib ind" style="margin-top:28px;">Ein Haus, das beruehrt. Bleibt. Nachhallt. Das noa Schladming ist das erste 5-Sterne Hotel der Stadt &ndash; und weit mehr als das. Ein Ort, an dem Qualitaet nicht glaenzen muss, um zu wirken.</p>
+        <p class="ib ind" style="margin-top:28px;">Ein Haus, das beruehrt. Bleibt. Nachhallt. Das noa Schladming ist das erste 5-Sterne Erlebnis der Stadt &ndash; und weit mehr als das. Ein Ort, an dem Qualitaet nicht glaenzen muss, um zu wirken.</p>
         <p class="ib">Nur 26 Suiten. Ski-in/Ski-out direkt an der Planai. Ein Restaurant, das ueber sich hinauswachst. Und ein Spa mit dem weltweit ersten Schaumdampfbad. Fuer alle, die nicht das Naechste suchen &ndash; sondern das Richtige.</p>
         <a class="ica" href="#anf">
           Verfuegbarkeit anfragen
@@ -396,7 +405,7 @@
         </a>
         <div class="ist">
           <div><div class="isn">26<span>+</span></div><div class="isl">Exklusive Suiten</div></div>
-          <div><div class="isn">5<span>*</span></div><div class="isl">Sterne Hotel</div></div>
+          <div><div class="isn">5<span>*</span></div><div class="isl">Sterne Komfort</div></div>
           <div><div class="isn">1<span>x</span></div><div class="isl">Ski-in / Ski-out</div></div>
         </div>
       </div>
@@ -413,7 +422,7 @@
   <div class="container">
     <div class="uh fu">
       <span class="lbl">Warum noa</span>
-      <div class="mto">Made to <span class="mto-line"></span> <em>Feel</em></div>
+      <div class="mto">Made to <span class="mto-line"></span> Feel</div>
     </div>
     <div class="ug">
       <div class="uc fu">
@@ -442,14 +451,14 @@
 
 <!-- FEATURES -->
 <section id="features" class="sp">
-  <div class="container"><div class="fh fu"><span class="lbl">Das noa Erlebnis</span><div class="mto">Made to <span class="mto-line"></span> <em>Explore</em></div></div></div>
+  <div class="container"><div class="fh fu"><span class="lbl">Das noa Erlebnis</span><div class="mto">Made to <span class="mto-line"></span> Explore</div></div></div>
   <div class="ft">
     <div class="ftile fu">
       <img src="https://raw.githubusercontent.com/manusiri05/lp-noa/main/images/goldenskysuite.png" alt="Luxussuiten noa Schladming 5 Sterne" loading="lazy" />
       <div class="fo"></div>
       <div class="fc">
         <div class="fn">01</div><h3 class="ftt">Luxussuiten</h3>
-        <p class="fb">26 Suiten &ndash; jede ein Raum fuer sich. Vom Double noa bis zur Starlight Suite mit Glasdach und Blick auf die Pisten der Planai. Raeume, die etwas mit einem machen.</p>
+        <p class="fb">26 Suiten &ndash; jede ein Raum fuer sich. Vom Double noa bis zur Starlight Suite mit Glasdach. Raeume, die etwas mit einem machen.</p>
         <a href="#zimmer" class="fl">Suiten entdecken <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
       </div>
     </div>
@@ -474,16 +483,7 @@
   </div>
 </section>
 
-<!-- PHILOSOPHY -->
-<section id="phil" class="sp">
-  <div class="pbg"></div>
-  <div class="container">
-    <div class="pc fu">
-      <p class="pq">Ploetzlich war da diese Ruhe.<br />Und <em>sie ist geblieben.</em></p>
-      <span class="ps">Martina &amp; Frank M. &mdash; Erste Gaeste des noa Schladming</span>
-    </div>
-  </div>
-</section>
+
 
 <!-- ZIMMER SLIDER – ALL SUITES -->
 <section id="zimmer" class="sp">
@@ -491,7 +491,7 @@
     <div class="zh">
       <div>
         <span class="lbl">26 Exklusive Suiten</span>
-        <div class="mto">Made to <span class="mto-line"></span> <em>Stay</em></div>
+        <div class="mto">Made to <span class="mto-line"></span> Stay</div>
       </div>
       <div class="zr">
         <button class="znb" id="zPrev" aria-label="Vorherige Suite"><svg viewBox="0 0 24 24"><path d="M15 18l-6-6 6-6"/></svg></button>
@@ -625,7 +625,7 @@
         <!-- 8: Double noa -->
         <div class="zsl">
           <div class="zim">
-            <img src="https://raw.githubusercontent.com/manusiri05/lp-noa/main/images/doublenoa.png" alt="Double noa Suite 5 Sterne Hotel Schladming" loading="lazy" />
+            <img src="https://raw.githubusercontent.com/manusiri05/lp-noa/main/images/doublenoa.png" alt="Double noa Suite 5-Sterne Komfort Schladming" loading="lazy" />
             <span class="zcat">noa Collection</span>
           </div>
           <div class="zbody">
@@ -712,7 +712,7 @@
 <!-- EXPERIENCES -->
 <section id="erl" class="sp">
   <div class="container">
-    <div class="eh fu"><span class="lbl">Aktivitaeten &amp; Erlebnisse</span><div class="mto">Made to <span class="mto-line"></span> <em>Discover</em></div></div>
+    <div class="eh fu"><span class="lbl">Aktivitaeten &amp; Erlebnisse</span><div class="mto">Made to <span class="mto-line"></span> Discover</div></div>
     <div class="eg">
       <div class="ec fu">
         <div class="eci"><img src="https://noa-schladming.com/wp-content/uploads/2026/01/Skifahren-Reiteralm-217-C-Mirja-Geh-12-2023-scaled-750x600-c-center.jpg" alt="Skifahren Schladming Planai Luxushotel" loading="lazy" /></div>
@@ -764,7 +764,7 @@
 
 <!-- GALLERY -->
 <section id="gal" class="sp">
-  <div class="container"><div class="gh fu"><span class="lbl">Impressionen</span><div class="mto">Made to <span class="mto-line"></span> <em>See</em></div></div></div>
+  <div class="container"><div class="gh fu"><span class="lbl">Impressionen</span><div class="mto">Made to <span class="mto-line"></span> See</div></div></div>
   <div class="gg" style="max-width:1440px;margin:0 auto;padding:0 4px;">
     <div class="gi"><img src="https://raw.githubusercontent.com/manusiri05/lp-noa/main/images/noa-schladming-dachterrasse-rooftop-pool-18-900x900-c-center.webp" alt="Rooftop Pool noa Schladming Luxury Hotel" loading="lazy" /></div>
     <div class="gi"><img src="https://noa-schladming.com/wp-content/uploads/2026/03/frau-mit-weinglaeser-1300x1080-c-center.jpg" alt="noa Bar Schladming" loading="lazy" /></div>
@@ -845,7 +845,7 @@
         <div id="fok"><p>Vielen Dank fuer Ihre Anfrage. Wir melden uns innerhalb von 24 Stunden persoenlich bei Ihnen.</p></div>
         <div class="fsr">
           <button type="submit" class="bp" id="sb">Anfrage absenden <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></button>
-          <span class="fsn">Kostenlos &middot; Unverbindlich &middot; 24h Antwort</span>
+          
         </div>
       </form>
     </div>
@@ -857,8 +857,8 @@
   <div class="container">
     <div class="ftp">
       <div class="ftb">
-        <img src="https://raw.githubusercontent.com/manusiri05/lp-noa/main/images/noa_logo.jpg" alt="noa Schladming" />
-        <p>Das erste 5-Sterne Luxushotel Schladmings. 26 Suiten, Ski-in/Ski-out Planai, Rooftop Sky-Pool. Ein Ort, der bleibt. Made to stay.</p>
+        <img src="https://raw.githubusercontent.com/manusiri05/lp-noa/main/images/noa-logotype-full-color-rgb-2200px-w-72ppi.png" alt="noa Schladming" />
+        <p>5-Sterne Feeling in Schladming. 26 Suiten, Ski-in/Ski-out Planai, Rooftop Sky-Pool. Ein Ort, der bleibt.</p>
       </div>
       <div class="ftc">
         <h4 class="ftct">Hotel</h4>
@@ -887,7 +887,15 @@ window.addEventListener('load',()=>{document.getElementById('hero').classList.ad
 
 /* HEADER */
 const hd=document.getElementById('hd');
-window.addEventListener('scroll',()=>{hd.classList.toggle('sc',window.scrollY>60);},{passive:true});
+const hdlogo=document.getElementById('hdlogo');
+window.addEventListener('scroll',()=>{
+  const sc=window.scrollY>80;
+  hd.classList.toggle('sc',sc);
+  if(hdlogo){
+    const src=sc?hdlogo.dataset.srcScroll:hdlogo.dataset.srcDefault;
+    if(hdlogo.src!==src)hdlogo.src=src;
+  }
+},{passive:true});
 
 /* FADE-UP */
 const fels=document.querySelectorAll('.fu');
